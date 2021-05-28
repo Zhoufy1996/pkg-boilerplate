@@ -32,6 +32,12 @@ const eslintConfig = {
         '@typescript-eslint/no-shadow': 'error',
         'no-unused-vars': 'off',
         '@typescript-eslint/no-unused-vars': 'error',
+        'import/no-extraneous-dependencies': [
+            'error',
+            {
+                devDependencies: true,
+            },
+        ],
     },
 };
 

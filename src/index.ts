@@ -1,6 +1,5 @@
 import shell from 'shelljs';
 
-console.log(shell.ls());
-setInterval(() => {
-    console.log(new Date().toUTCString());
-}, 1000);
+shell.exec('yarn cfg');
+shell.exec('yarn build');
+shell.exec('yarn pkg');

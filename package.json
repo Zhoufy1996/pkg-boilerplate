@@ -6,9 +6,11 @@
     "main": "index.ts",
     "scripts": {
         "lint:fix": "eslint --fix --ext .ts,.tsx .",
-        "start": "ts-node src/index.ts --trace-warnings",
-        "pkg": "pkg -t --out-path pkg .",
-        "build": "webpack --config ./webpack.config.ts"
+        "start": "ts-node src/script.ts",
+        "build": "webpack --config ./webpack.config.ts",
+        "pkg": "pkg -t --out-path ../pkg/pkg-boilerplate .",
+        "cfg": "ts-node ./src/config.ts",
+        "out": "ts-node ./src/index.ts"
     },
     "pkg": {
         "options": [
@@ -28,10 +30,13 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "minimist": "^1.2.5",
+        "open": "^8.2.0",
         "pkg": "^5.2.1",
         "shelljs": "^0.8.4"
     },
     "devDependencies": {
+        "@types/minimist": "^1.2.1",
         "@types/node": "^14.14.34",
         "@types/shelljs": "^0.8.8",
         "@typescript-eslint/eslint-plugin": "^4.17.0",
