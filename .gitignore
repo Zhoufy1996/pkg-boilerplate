@@ -1,8 +1,5 @@
 /node_modules
 /dist
 /log
-/src/**/*.js
-/src/**/*.map
-/src/**/*.d.ts
 /pkg
 /tsconfig.tsbuildinfo
