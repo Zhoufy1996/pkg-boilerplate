@@ -1,10 +1,5 @@
 ```
-git remote set-url origin @REPOSITORY
-
 yarn install
 
-yarn start
-
-yarn pkg
-
+yarn out
 ```
