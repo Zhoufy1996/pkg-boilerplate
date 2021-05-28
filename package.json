@@ -2,12 +2,13 @@
     "name": "pkg-boilerplate",
     "version": "1.0.0",
     "description": "",
-    "bin": "src/index.ts",
+    "bin": "dist/app.js",
     "main": "index.ts",
     "scripts": {
         "lint:fix": "eslint --fix --ext .ts,.tsx .",
         "start": "ts-node src/index.ts --trace-warnings",
-        "pkg": "pkg -t --out-path pkg ."
+        "pkg": "pkg -t --out-path pkg .",
+        "build": "webpack --config ./webpack.config.ts"
     },
     "pkg": {
         "options": [
@@ -27,10 +28,12 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "pkg": "^5.2.1"
+        "pkg": "^5.2.1",
+        "shelljs": "^0.8.4"
     },
     "devDependencies": {
         "@types/node": "^14.14.34",
+        "@types/shelljs": "^0.8.8",
         "@typescript-eslint/eslint-plugin": "^4.17.0",
         "@typescript-eslint/parser": "^4.17.0",
         "clean-webpack-plugin": "^4.0.0-alpha.0",
@@ -44,7 +47,10 @@
         "eslint-plugin-react": "^7.22.0",
         "eslint-plugin-typescript": "^0.14.0",
         "prettier": "^2.2.1",
+        "ts-loader": "^9.2.2",
         "ts-node": "^9.1.1",
-        "typescript": "^4.2.3"
+        "typescript": "^4.2.3",
+        "webpack": "^5.38.1",
+        "webpack-cli": "^4.7.0"
     }
 }
