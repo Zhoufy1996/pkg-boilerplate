@@ -4,7 +4,7 @@ import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 
 const webpackConfig: webpack.Configuration = {
     entry: {
-        app: path.join(__dirname, 'src/script.ts'),
+        app: path.join(__dirname, 'src/exec.ts'),
     },
     output: {
         path: path.join(__dirname, 'dist'),

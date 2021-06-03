@@ -1,25 +1,16 @@
-import minimist from 'minimist';
 import shell from 'shelljs';
-import os from 'os';
 import open from 'open';
 import path from 'path';
 
-const startup = () => {
-    const args = minimist(process.argv.slice(2));
+export interface CreateAndOpenFileProps {
+    dirname: string;
+    name: string;
+    suffix: string;
+}
 
-    const name = args.n || new Date().getTime();
-
-    const suffix = args.s || 'md';
-
-    const dir = args.d || path.join(os.homedir(), 'desktop');
-
+export const createAndOpenFile = ({ name, dirname, suffix }: CreateAndOpenFileProps) => {
     const filename = `${name}.${suffix}`;
-
-    shell.cd(dir);
-
+    shell.cd(dirname);
     shell.touch(filename);
-
-    open(path.join(dir, filename));
+    open(path.join(dirname, filename));
 };
-
-startup();

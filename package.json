@@ -6,11 +6,10 @@
     "main": "index.ts",
     "scripts": {
         "lint:fix": "eslint --fix --ext .ts,.tsx .",
-        "start": "ts-node src/script.ts",
+        "start": "ts-node src/exec.ts",
         "build": "webpack --config ./webpack.config.ts",
-        "pkg": "pkg -t --out-path ../pkg/pkg-boilerplate .",
-        "cfg": "ts-node ./src/config.ts",
-        "out": "ts-node ./src/index.ts"
+        "pkg": "pkg -t --out-path ./pkg/pkg-boilerplate .",
+        "out": "ts-node ./src/out.ts"
     },
     "pkg": {
         "options": [
