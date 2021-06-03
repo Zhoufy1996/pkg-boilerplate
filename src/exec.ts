@@ -3,9 +3,15 @@ import os from 'os';
 import path from 'path';
 import { createAndOpenFile } from './script';
 
-const args = minimist(process.argv.slice(2));
+interface Args {
+    n: string;
+    s: string;
+    d: string;
+}
 
-const name = args.n || new Date().getTime();
+const args = minimist(process.argv.slice(2)) as unknown as Args;
+
+const name = args.n || `${new Date().getTime()}`;
 
 const suffix = args.s || 'md';
 
